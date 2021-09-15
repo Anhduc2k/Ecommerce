@@ -12,7 +12,7 @@ import heroSliderData from '../assets/fake-data/hero-slider'
 import policy from '../assets/fake-data/policy'
 import productData from '../assets/fake-data/products'
 
-import banner from '../assets/images/banner.png'
+import banner from '../assets/images/banner2.jpg'
 
 const Home = () => {
   return (
@@ -60,7 +60,7 @@ const Home = () => {
         <SectionTitle>sản phẩm mới</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.getProducts(8).map((item, index) => (
+            {productData.getProducts(10).map((item, index) => (
               <ProductCard
                 key={index}
                 img01={item.image01}
@@ -90,7 +90,7 @@ const Home = () => {
         <SectionTitle>phổ biến</SectionTitle>
         <SectionBody>
           <Grid col={4} mdCol={2} smCol={1} gap={20}>
-            {productData.getProducts(12).map((item, index) => (
+            {productData.getProducts(20).map((item, index) => (
               <ProductCard
                 key={index}
                 img01={item.image01}
