@@ -35,6 +35,15 @@ const product_11_image_02 = require('../images/products/product-11 (2).jpg').def
 const product_12_image_01 = require('../images/products/product-12 (1).jpg').default
 const product_12_image_02 = require('../images/products/product-12 (2).jpg').default
 
+const product_13_image_01 = require('../images/products/product-13 (1).jpg').default
+const product_13_image_02 = require('../images/products/product-13 (2).jpg').default
+
+const product_14_image_01 = require('../images/products/product-14 (1).jpg').default
+const product_14_image_02 = require('../images/products/product-14 (2).jpg').default
+
+const product_15_image_01 = require('../images/products/product-15 (1).jpg').default
+const product_15_image_02 = require('../images/products/product-15 (2).jpg').default
+
 const products = [
   {
     title: 'Áo thun Dinosaur 01',
@@ -215,8 +224,39 @@ const products = [
     colors: ['blue', 'black'],
     slug: 'quan-jean-phong-cach-18',
     size: ['s', 'm', 'l', 'xl']
+  },
+  {
+    title: 'Áo somi tay ngắn 19',
+    price: '299000',
+    image01: product_13_image_01,
+    image02: product_13_image_02,
+    categorySlug: 'ao-somi',
+    colors: ['white', 'blue'],
+    slug: 'ao-somi-tay-ngan-19',
+    size: ['s', 'l', 'xl']
+  },
+  {
+    title: 'Áo somi tay ngắn 20',
+    price: '299000',
+    image01: product_14_image_01,
+    image02: product_14_image_02,
+    categorySlug: 'ao-somi',
+    colors: ['white', 'blue'],
+    slug: 'ao-somi-tay-ngan-20',
+    size: ['s', 'l', 'xl']
+  },
+  {
+    title: 'Quần jean phong cách 21',
+    price: '299000',
+    image01: product_15_image_01,
+    image02: product_15_image_02,
+    categorySlug: 'quan-jean',
+    colors: ['blue', 'black'],
+    slug: 'quan-jean-phong-cach-21',
+    size: ['s', 'm', 'l', 'xl']
   }
-  // 18 products
+
+  // 21 products
 ]
 
 const getAllProducts = () => products
