@@ -46,9 +46,13 @@
 
   &__price {
     color: $txt-main-color;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 10px;
+
+    del {
+      margin-left: -6px;
+    }
 
     &__old {
       color: $txt-second-color;

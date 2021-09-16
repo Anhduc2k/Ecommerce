@@ -59,7 +59,7 @@ const Home = () => {
       <Section>
         <SectionTitle>sản phẩm mới</SectionTitle>
         <SectionBody>
-          <Grid col={4} mdCol={2} smCol={1} gap={20}>
+          <Grid col={5} mdCol={2} smCol={1} gap={20}>
             {productData.getProducts(10).map((item, index) => (
               <ProductCard
                 key={index}
