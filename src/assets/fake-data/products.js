@@ -106,7 +106,7 @@ const products = [
     size: ['s', 'm', 'xl']
   },
   {
-    title: 'Áo somi caro 07',
+    title: 'Áo sơ mi caro 07',
     price: '299000',
     image01: product_07_image_01,
     image02: product_07_image_02,
@@ -116,7 +116,7 @@ const products = [
     size: ['l', 'xl']
   },
   {
-    title: 'Áo somi dài tay 08',
+    title: 'Áo sơ mi dài tay 08',
     price: '299000',
     image01: product_08_image_01,
     image02: product_08_image_02,
@@ -126,7 +126,7 @@ const products = [
     size: ['s', 'm', 'xl']
   },
   {
-    title: 'Áo somi tay dài 09',
+    title: 'Áo sơ mi tay dài 09',
     price: '299000',
     image01: product_09_image_01,
     image02: product_09_image_02,
@@ -196,7 +196,7 @@ const products = [
     size: ['xl']
   },
   {
-    title: 'Áo somi dài tay 16',
+    title: 'Áo sơ mi dài tay 16',
     price: '299000',
     image01: product_08_image_01,
     image02: product_08_image_02,
@@ -206,7 +206,7 @@ const products = [
     size: ['m', 'xl']
   },
   {
-    title: 'Áo somi tay dài 17',
+    title: 'Áo sơ mi tay dài 17',
     price: '299000',
     image01: product_09_image_01,
     image02: product_09_image_02,
@@ -226,7 +226,7 @@ const products = [
     size: ['s', 'm', 'l', 'xl']
   },
   {
-    title: 'Áo somi tay ngắn 19',
+    title: 'Áo sơ mi tay ngắn 19',
     price: '299000',
     image01: product_13_image_01,
     image02: product_13_image_02,
@@ -236,7 +236,7 @@ const products = [
     size: ['s', 'l', 'xl']
   },
   {
-    title: 'Áo somi tay ngắn 20',
+    title: 'Áo sơ mi tay ngắn 20',
     price: '299000',
     image01: product_14_image_01,
     image02: product_14_image_02,
