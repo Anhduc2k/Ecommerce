@@ -12,14 +12,14 @@ const ProductView = props => {
   if (product === undefined)
     product = {
       title: '',
-      price: '',
-      image01: null,
-      image02: null,
-      categorySlug: '',
+      price: 0,
+      // image01: null,
+      // image02: null,
+      // categorySlug: '',
       colors: [],
       slug: '',
-      size: [],
-      description: ''
+      size: []
+      // description: ''
     }
 
   const [previewImg, setPreviewImg] = useState(product.image01)
