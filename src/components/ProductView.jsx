@@ -3,23 +3,30 @@ import PropTypes from 'prop-types'
 
 import { withRouter } from 'react-router'
 
+import { useDispatch } from 'react-redux'
+
+import { addItem } from '../redux/shopping-cart/cartItemsSlide'
+import { remove } from '../redux/product-modal/productModalSlice'
+
 import Button from './Button'
 import numberWithCommas from '../utils/numberWithCommas'
 
 const ProductView = props => {
+  const dispatch = useDispatch()
+
   let product = props.product
 
   if (product === undefined)
     product = {
       title: '',
-      price: 0,
-      // image01: null,
-      // image02: null,
-      // categorySlug: '',
+      price: '',
+      image01: null,
+      image02: null,
+      categorySlug: '',
       colors: [],
       slug: '',
-      size: []
-      // description: ''
+      size: [],
+      description: ''
     }
 
   const [previewImg, setPreviewImg] = useState(product.image01)
@@ -62,11 +69,39 @@ const ProductView = props => {
   }
 
   const addToCart = () => {
-    if (check()) console.log({ color, size, quantity })
+    if (check()) {
+      let newItem = {
+        slug: product.slug,
+        color: color,
+        size: size,
+        price: product.price,
+        quantity: quantity
+      }
+      if (dispatch(addItem(newItem))) {
+        alert('Thêm vào giỏ hàng thành công ')
+      } else {
+        alert('Thêm thất bại')
+      }
+    }
   }
 
   const goToCart = () => {
-    if (check()) props.history.push('/cart')
+    if (check()) {
+      let newItem = {
+        slug: product.slug,
+        color: color,
+        size: size,
+        price: product.price,
+        quantity: quantity
+      }
+      if (dispatch(addItem(newItem))) {
+        dispatch(remove())
+        alert('Đặt hàng thành công')
+        props.history.push('/cart')
+      } else {
+        alert('Đặt hàng thất bại!')
+      }
+    }
   }
 
   return (
@@ -83,7 +118,7 @@ const ProductView = props => {
         <div className="product__images__main">
           <img src={previewImg} alt="" />
         </div>
-        <div className={`product-description mobile ${descriptionExpand ? 'expand' : ''}`}>
+        <div className={`product-description ${descriptionExpand ? 'expand' : ''}`}>
           <div className="product-description__title">Chi tiết sản phẩm</div>
           <div className="product-description__content" dangerouslySetInnerHTML={{ __html: product.description }}></div>
           <div className="product-description__toggle">
@@ -141,6 +176,15 @@ const ProductView = props => {
         <div className="product__info__item">
           <Button onClick={() => addToCart()}>thêm vào giỏ</Button>
           <Button onClick={() => goToCart()}>mua ngay</Button>
+        </div>
+      </div>
+      <div className={`product-description mobile ${descriptionExpand ? 'expand' : ''}`}>
+        <div className="product-description__title">Chi tiết sản phẩm</div>
+        <div className="product-description__content" dangerouslySetInnerHTML={{ __html: product.description }}></div>
+        <div className="product-description__toggle">
+          <Button size="sm" onClick={() => setDescriptionExpand(!descriptionExpand)}>
+            {descriptionExpand ? 'Thu gọn' : 'Xem thêm'}
+          </Button>
         </div>
       </div>
     </div>
